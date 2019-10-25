@@ -19,7 +19,8 @@ namespace DtCoCo.Ocelot.Extension
         public static IConfigurationRoot GetAppConfiguration(this IHostingEnvironment env)
         {
             var cacheKey = env.ContentRootPath + "#" + env.EnvironmentName + "#" + env.IsDevelopment();
-            return _configurationCache.GetOrAdd(cacheKey, _ => )
+            return _configurationCache.GetOrAdd(cacheKey,
+                _ => BuildConfiguration(env.ContentRootPath, env.EnvironmentName, env.IsDevelopment()));
         }
 
         private static IConfigurationRoot BuildConfiguration(string path, string environmentName = null,
