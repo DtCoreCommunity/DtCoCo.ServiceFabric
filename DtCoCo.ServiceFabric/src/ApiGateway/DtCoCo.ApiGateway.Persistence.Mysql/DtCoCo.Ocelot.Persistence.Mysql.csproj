@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.30" />
+    <PackageReference Include="MySql.Data" Version="8.0.17" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Utility\DtCoCo.ServiceFabric.Utility\DtCoCo.ServiceFabric.Utility.csproj" />
+    <ProjectReference Include="..\DtCoCo.Ocelot.Extension\DtCoCo.Ocelot.Extension.csproj" />
+  </ItemGroup>
+
+</Project>
